@@ -7,15 +7,22 @@ First download the powershell script Intuneprinsterscript.ps1
 Replace comments for organization purposes if you plan to deploy multiple different printers.
 
 These 5 lines you will need to change:
+
 $PrinterName = "Printer name" # Change this to what you want your printer name to show up as
+
 $PortName    = "IP_192.168.1.10" # Change this to the IP_IP of your printer
+
 $PrinterIP   = "192.168.1.10" # Change this to the IP of your printer
+
 $DriverName  = "Printerdrive name"   # Change this to match exact installed driver name
   To confirm this, you can test by installing the printer, running Get-PrinterDriver in powershell and finding the name there. For example, we will use the printer model Canon imageFORCE C5140. After downloading the drivers we can see 'Canon Generic Plus PCL6' is the driver name.
   <img width="1034" height="318" alt="image" src="https://github.com/user-attachments/assets/e9092a96-41cd-424c-97e1-407056fc98c7" />
+
 $InfPath = Join-Path $ScriptFolder "Printerdriver.inf" # Change this to the printer driver you are using.
   To confirm this, you can find the proper .INF in the extracted files. For example with a Canon imageFORCE C5140 we see this:
-  <img width="706" height="93" alt="image" src="https://github.com/user-attachments/assets/95eab45f-f2ee-4702-9e98-2fc394456674" /> so it would be CNP60MA64.inf.
+  <img width="706" height="93" alt="image" src="https://github.com/user-attachments/assets/95eab45f-f2ee-4702-9e98-2fc394456674" /> 
+  
+So it would be CNP60MA64.inf.
 
 Once you have all that filled out you can save it and put them all in the same folder.
 
